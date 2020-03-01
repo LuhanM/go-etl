@@ -1,0 +1,35 @@
+version: '2.3'
+services:
+  go-elt:
+    container_name: "go-etl"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+        - '8180:8080'
+    depends_on:
+        - postgres
+    environment:
+      POSTGRES_ADDRESS: "postgres"
+      POSTGRES_PORT: 5432
+  postgres:
+    container_name: 'postgres'
+    restart: unless-stopped
+    image: postgres
+    ports:
+        - '5432:5432'
+    environment:
+      POSTGRES_PASSWORD: 'postgres'
+    volumes:
+        - ./create_table.sql:/docker-entrypoint-initdb.d/init.sql
+  pgadmin:
+    container_name: 'pgadmin'
+    restart: unless-stopped
+    image: dpage/pgadmin4
+    ports:
+        - '53675:53675'
+    environment:
+      PGADMIN_DEFAULT_EMAIL: 'meireles.luhan@gmail.com'
+      PGADMIN_DEFAULT_PASSWORD: 'postgres'
+      PGADMIN_LISTEN_ADDRESS: 'postgres'
