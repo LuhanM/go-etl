@@ -6,12 +6,12 @@ Esta aplicação recebe, tranforma e persiste registro através de uma operaçã
 
 ## Docker
 
-1 - Clone o repositório para a sua máquina;
+1 - Clone o repositório para a sua máquina `git clone git@github.com:LuhanM/go-etl.git`;
 
 2 - Acesso o diretório criado pelo clone;
 
-3 - Execute o comando "docker-compose up -d --build"
-    obs: Executando este comando o script "create-table.sql" será executado automáticamente, porém,
+3 - Execute o comando `docker-compose up -d --build`
+    obs: Executando este comando o script [create-table.sql](https://github.com/LuhanM/go-etl/blob/master/create_table.sql) será executado automáticamente, porém,
         caso esteja utilizando outra instação do postgres será necessário executá-lo e também alterar as variáveis de ambiente no compose. 
 
 4 - Para importar o arquivo, através do Postman ou aplicação semelhante execute o verbo POST para localhost:8080/arquivo tendo, no form-data as seguintes chaves:
