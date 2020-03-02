@@ -8,8 +8,8 @@ CREATE TABLE public.estatistica
     "lojaultimacompra" character varying(14),
     private boolean NOT NULL,
     "ticketmedio" numeric(10, 2),
-    "ticketultimacompra" numeric(10, 2)
-    --,PRIMARY KEY (cpf)
+    "ticketultimacompra" numeric(10, 2),
+    PRIMARY KEY (cpf)
 );
 
 ALTER TABLE public.estatistica

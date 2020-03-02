@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/luhanm/go-etl/banco"
-	"github.com/luhanm/go-etl/util"
+	"github.com/LuhanM/go-etl/banco"
+	"github.com/LuhanM/go-etl/util"
 )
 
 //ImportarArquivo é o Handle que deve ser utilziado para importar massa de dados
@@ -22,7 +22,10 @@ func ImportarArquivo(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte(fmt.Sprint("Não foi possível importar os dados. Detalhe: ", err)))
 	}
 
-	transacional, _ = strconv.ParseBool(r.FormValue("transacional"))
+	transacional = true
+	if r.FormValue("transacional") != "" {
+		transacional, _ = strconv.ParseBool(r.FormValue("transacional"))
+	}
 	defer file.Close()
 	buf := &bytes.Buffer{}
 	io.Copy(buf, file)
