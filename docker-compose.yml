@@ -1,6 +1,6 @@
 version: '2.3'
 services:
-  go-elt:
+  go-etl:
     container_name: "go-etl"
     build:
       context: .
@@ -30,8 +30,9 @@ services:
     restart: unless-stopped
     image: dpage/pgadmin4
     ports:
-        - '53675:53675'
+        - '5050:80'
+    depends_on:
+        - postgres
     environment:
       PGADMIN_DEFAULT_EMAIL: 'meireles.luhan@gmail.com'
       PGADMIN_DEFAULT_PASSWORD: 'postgres'
-      PGADMIN_LISTEN_ADDRESS: 'postgres'
