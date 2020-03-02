@@ -10,12 +10,11 @@ import (
 )
 
 const (
-	DB_ADDRESS = "localhost"
-	DB_PORT    = 5432
-	DB_DRIVER  = "postgres"
-	DB_USER    = "postgres"
-	//DB_PASSWORD = "postgres"
-	DB_PASSWORD = "admin"
+	DB_ADDRESS  = "localhost"
+	DB_PORT     = 5432
+	DB_DRIVER   = "postgres"
+	DB_USER     = "postgres"
+	DB_PASSWORD = "postgres"
 	DB_NAME     = "postgres"
 )
 
