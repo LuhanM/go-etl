@@ -13,6 +13,8 @@ services:
     environment:
       POSTGRES_ADDRESS: "postgres"
       POSTGRES_PORT: 5432
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASS: 'postgres'
   postgres:
     container_name: 'postgres'
     restart: unless-stopped

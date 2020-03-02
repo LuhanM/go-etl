@@ -20,19 +20,29 @@ const (
 
 //AbrirConexaoBD realiza a abertura de conexão com o DB
 func AbrirConexaoBD() (*sql.DB, error) {
-	postgresAddress := DB_ADDRESS
-	if os.Getenv("POSTGRES_ADDRESS") != "" {
-		postgresAddress = os.Getenv("POSTGRES_ADDRESS")
+	dbAddress := os.Getenv("POSTGRES_ADDRESS")
+	if postgresAddress == "" {
+		postgresAddress = DB_ADDRESS
 	}
 
-	var postgresPort int64
+	var dbPort int64
 	postgresPort = DB_PORT
 	if os.Getenv("POSTGRES_PORT") != "" {
 		postgresPort, _ = strconv.ParseInt(os.Getenv("POSTGRES_PORT"), 0, 32)
 	}
 
+	dbUser := os.Getenv("POSTGRES_USER")
+	if dbUser == "" {
+		dbUser = DB_USER
+	}
+
+	dbPass := os.Getenv("POSTGRES_PASS")
+	if dbPass == "" {
+		dbPass = DB_PASSWORD
+	}
+
 	dbinfo := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable",
-		postgresAddress, postgresPort, DB_USER, DB_PASSWORD, DB_NAME)
+		dbAddress, dbPort, DB_USER, DB_PASSWORD, DB_NAME)
 	fmt.Println(postgresAddress, postgresPort)
 	fmt.Println(dbinfo)
 	db, err := sql.Open(DB_DRIVER, dbinfo)

@@ -21,5 +21,6 @@ Esta aplicação recebe, tranforma e persiste registro através de uma operaçã
     |                     | utilizada ou não transação global |
     |_____________________|___________________________________|
 
+5 - Caso importação ocorra com sucesso será retorndo status 200 e os registrões estarão no banco e caso contrário 400.
 
-## re
+
