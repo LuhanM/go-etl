@@ -1,4 +1,4 @@
-package banco
+package config
 
 import (
 	"database/sql"
@@ -18,7 +18,7 @@ const (
 	DB_NAME     = "postgres"
 )
 
-//AbrirConexaoBD realiza a abertura de conexão com o DB
+// AbrirConexaoBD realiza a abertura de conexão com o DB
 func AbrirConexaoBD() (*sql.DB, error) {
 	dbAddress := os.Getenv("POSTGRES_ADDRESS")
 	if dbAddress == "" {
@@ -54,7 +54,7 @@ func AbrirConexaoBD() (*sql.DB, error) {
 	return db, nil
 }
 
-//AbrirTransacaoEPreparar abre transão no banco e prepara o insert
+// AbrirTransacaoEPreparar abre transão no banco e prepara o insert
 func AbrirTransacaoEPreparar(db *sql.DB) (*sql.Tx, *sql.Stmt, error) {
 	txn, err := db.Begin()
 	if err != nil {

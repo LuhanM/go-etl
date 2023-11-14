@@ -1,4 +1,4 @@
-package util
+package schema
 
 import (
 	"bytes"
@@ -24,7 +24,7 @@ type Registro struct {
 	LojaUltimaCompra   sql.NullString
 }
 
-//GetNullString Retorna a partir de uma string o struct com os dado e sua validação
+// GetNullString Retorna a partir de uma string o struct com os dado e sua validação
 func GetNullString(p string) sql.NullString {
 	var result sql.NullString
 	result.String = p
@@ -42,7 +42,7 @@ func StringWithoutSpecialCharacter(p []byte) string {
 	return string(content)
 }
 
-//ParseByteToFloat realiza parse de []byte para sql.NullFloat64
+// ParseByteToFloat realiza parse de []byte para sql.NullFloat64
 func ParseByteToFloat(p []byte) sql.NullFloat64 {
 	var result sql.NullFloat64
 	var err error
@@ -52,7 +52,7 @@ func ParseByteToFloat(p []byte) sql.NullFloat64 {
 	return result
 }
 
-//FormatarRegistro recebe array de campos e converte para objeto estruturado
+// FormatarRegistro recebe array de campos e converte para objeto estruturado
 func FormatarRegistro(campos [][]byte) (Registro, error) {
 	var reg Registro
 	var err error
@@ -62,12 +62,12 @@ func FormatarRegistro(campos [][]byte) (Registro, error) {
 	reg.LojaUltimaCompra = GetNullString(StringWithoutSpecialCharacter(campos[7]))
 	reg.Private, err = strconv.ParseBool(string(campos[1]))
 	if err != nil {
-		return reg, fmt.Errorf("Erro ao converter valor do campo 'Private'. Detalhes: %s", err)
+		return reg, fmt.Errorf("erro ao converter valor do campo 'Private'. Detalhes: %s", err)
 	}
 
 	reg.Incompleto, err = strconv.ParseBool(string(campos[2]))
 	if err != nil {
-		return reg, fmt.Errorf("Erro ao converter valor do campo 'Incompleto'. Detalhes: %s", err)
+		return reg, fmt.Errorf("erro ao converter valor do campo 'Incompleto'. Detalhes: %s", err)
 	}
 
 	reg.DataUltimaCompra.Time, err = time.Parse("2006-01-02", string(campos[3]))
