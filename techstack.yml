@@ -1,0 +1,277 @@
+repo_name: LuhanM/go-etl
+report_id: aeb4c128def14261edba520dd0e2efbb
+version: 0.1
+repo_type: Public
+timestamp: '2024-03-13T14:18:06+00:00'
+requested_by: LuhanM
+provider: github
+branch: master
+detected_tools_count: 20
+tools:
+- name: Golang
+  description: An open source programming language that makes it easy to build simple,
+    reliable, and efficient software
+  website_url: http://golang.org/
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1005/O6AczwfV_400x400.png
+  detection_source_url: https://github.com/LuhanM/go-etl
+  detection_source: Repo Metadata
+- name: SQL
+  description: It is a domain-specific language used in programming
+  website_url: https://en.wikipedia.org/wiki/SQL
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/2271/default_068d33483bba6b81ee13fbd4dc7aab9780896a54.png
+  detection_source_url: https://github.com/LuhanM/go-etl/blob/master/create_table.sql
+  detection_source: create_table.sql
+  last_updated_by: LuhanM
+  last_updated_on: 2020-03-01 23:21:53.000000000 Z
+- name: Gin Gonic
+  description: HTTP web framework written in Go
+  website_url: https://gin-gonic.com/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/4221/7894478.png
+  detection_source_url: https://github.com/LuhanM/go-etl/blob/master/go.mod
+  detection_source: go.mod
+  last_updated_by: meireles.luhan@gmail.com
+  last_updated_on: 2023-11-14 18:40:19.000000000 Z
+- name: Protobuf
+  description: Google's data interchange format
+  website_url: https://developers.google.com/protocol-buffers/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Serialization Frameworks
+  image_url: https://img.stackshare.io/service/4393/ma2jqJKH_400x400.png
+  detection_source_url: https://github.com/LuhanM/go-etl/blob/master/go.mod
+  detection_source: go.mod
+  last_updated_by: meireles.luhan@gmail.com
+  last_updated_on: 2023-11-14 18:40:19.000000000 Z
+- name: PostgreSQL
+  description: A powerful, open source object-relational database system
+  website_url: http://www.postgresql.org/
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Databases
+  image_url: https://img.stackshare.io/service/1028/ASOhU5xJ.png
+  detection_source_url: https://github.com/LuhanM/go-etl/blob/master/docker-compose.yml
+  detection_source: docker-compose.yml
+  last_updated_by: LuhanM
+  last_updated_on: 2020-03-02 23:08:44.000000000 Z
+- name: Docker
+  description: Enterprise Container Platform for High-Velocity Innovation.
+  website_url: https://www.docker.com/
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Virtual Machine Platforms & Containers
+  image_url: https://img.stackshare.io/service/586/n4u37v9t_400x400.png
+  detection_source_url: https://github.com/LuhanM/go-etl
+  detection_source: Repo Metadata
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/LuhanM/go-etl
+  detection_source: Repo Metadata
+- name: codec
+  description: Idiomatic codec and rpc lib for msgpack, cbor, json, etc
+  package_url: https://pkg.go.dev/github.com/ugorji/go/codec
+  version: 1.2.11
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/LuhanM/go-etl/blob/master/go.sum
+  detection_source: go.mod
+  last_updated_by: meireles.luhan@gmail.com
+  last_updated_on: 2023-11-14 18:40:19.000000000 Z
+- name: crypto
+  description: Go supplementary cryptography libraries
+  package_url: https://pkg.go.dev/golang.org/x/crypto
+  version: 0.9.0
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/LuhanM/go-etl/blob/master/go.sum
+  detection_source: go.mod
+  last_updated_by: meireles.luhan@gmail.com
+  last_updated_on: 2023-11-14 18:40:19.000000000 Z
+- name: gin
+  description: Gin is a HTTP web framework written in Go
+  package_url: https://pkg.go.dev/github.com/gin-gonic/gin
+  version: 1.9.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/LuhanM/go-etl/blob/master/go.sum
+  detection_source: go.mod
+  last_updated_by: meireles.luhan@gmail.com
+  last_updated_on: 2023-11-13 21:00:00.000000000 Z
+- name: go-isatty
+  description: Package isatty implements interface to isatty
+  package_url: https://pkg.go.dev/github.com/mattn/go-isatty
+  version: 0.0.19
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/LuhanM/go-etl/blob/master/go.sum
+  detection_source: go.mod
+  last_updated_by: meireles.luhan@gmail.com
+  last_updated_on: 2023-11-14 18:40:19.000000000 Z
+- name: json-iterator/go
+  description: A high-performance 100% compatible drop-in replacement of "encoding/json"
+  package_url: https://pkg.go.dev/github.com/json-iterator/go
+  version: 1.1.12
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/LuhanM/go-etl/blob/master/go.sum
+  detection_source: go.mod
+  last_updated_by: meireles.luhan@gmail.com
+  last_updated_on: 2023-11-14 18:40:19.000000000 Z
+- name: locales
+  description: ":earth_americas: a set of locales generated from the CLDR Project
+    which can be used independently or within an i18n package; these were built for
+    use with"
+  package_url: https://pkg.go.dev/github.com/go-playground/locales
+  version: 0.14.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/LuhanM/go-etl/blob/master/go.sum
+  detection_source: go.mod
+  last_updated_by: meireles.luhan@gmail.com
+  last_updated_on: 2023-11-14 18:40:19.000000000 Z
+- name: mimetype
+  description: A golang library for detecting the MIME type and file extension
+  package_url: https://pkg.go.dev/github.com/gabriel-vasile/mimetype
+  version: 1.4.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/LuhanM/go-etl/blob/master/go.sum
+  detection_source: go.mod
+  last_updated_by: meireles.luhan@gmail.com
+  last_updated_on: 2023-11-14 18:40:19.000000000 Z
+- name: net
+  description: Go supplementary network libraries
+  package_url: https://pkg.go.dev/golang.org/x/net
+  version: 0.10.0
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/LuhanM/go-etl/blob/master/go.sum
+  detection_source: go.mod
+  last_updated_by: meireles.luhan@gmail.com
+  last_updated_on: 2023-11-13 21:00:00.000000000 Z
+- name: pq
+  description: Pure Go Postgres driver for database/sql
+  package_url: https://pkg.go.dev/github.com/lib/pq
+  version: 1.10.9
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/LuhanM/go-etl/blob/master/go.sum
+  detection_source: go.mod
+  last_updated_by: meireles.luhan@gmail.com
+  last_updated_on: 2023-11-13 21:00:00.000000000 Z
+- name: reflect2
+  description: Reflect api without runtime reflect.Value cost
+  package_url: https://pkg.go.dev/github.com/modern-go/reflect2
+  version: 1.0.2
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/LuhanM/go-etl/blob/master/go.sum
+  detection_source: go.mod
+  last_updated_by: meireles.luhan@gmail.com
+  last_updated_on: 2023-11-14 18:40:19.000000000 Z
+- name: sys
+  description: Go packages for low-level interaction with the operating system
+  package_url: https://pkg.go.dev/golang.org/x/sys
+  version: 0.0.0
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/LuhanM/go-etl/blob/master/go.sum
+  detection_source: go.mod
+  last_updated_by: meireles.luhan@gmail.com
+  last_updated_on: 2023-11-13 21:00:00.000000000 Z
+- name: text
+  description: Go text processing support
+  package_url: https://pkg.go.dev/golang.org/x/text
+  version: 0.9.0
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/LuhanM/go-etl/blob/master/go.sum
+  detection_source: go.mod
+  last_updated_by: meireles.luhan@gmail.com
+  last_updated_on: 2023-11-14 18:40:19.000000000 Z
+- name: universal-translator
+  description: ":speech_balloon: i18n Translator for Go/Golang using CLDR data + pluralization
+    rules"
+  package_url: https://pkg.go.dev/github.com/go-playground/universal-translator
+  version: 0.18.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/LuhanM/go-etl/blob/master/go.sum
+  detection_source: go.mod
+  last_updated_by: meireles.luhan@gmail.com
+  last_updated_on: 2023-11-14 18:40:19.000000000 Z
